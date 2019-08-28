@@ -12,7 +12,11 @@
 <body>
     <h1>Today I Learned</h1>
         <ul>
-             <time>27 August 2019</time>
+        <time>28 August 2019</time>
+            <li>
+            <code>securityContext</code> allows you to decide what must be true about a pod before it is scheduled on a node. <code>runAsNonRoot: true</code>, <code>readOnlyRootFilesystem: true</code>
+            </li>
+            <time>27 August 2019</time>
             <li>
             <code>SIGTERM</code> is a way of getting a process to gracefull shut down, while <code>SIGKILL</code> just kills everything without letting processes shut down. In K8s, the default time to wait for <code>SIGTERM</code> to finish is 30 seconds. 
             </li>
