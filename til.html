@@ -12,28 +12,30 @@
 <body>
     <h1>Today I Learned</h1>
         <ul>
-        <time>28 August 2019</time>
+        <h2><time>29 August 2019</time></h2>
+            <li>
+            In kops, you can create <code>instancegroups</code> which are a group nodes that share something like a size, or label. To see an instance group, run <code>kops get instancegroups</code>.
+            </li>
+        <h2><time>28 August 2019</time></h2>
             <li>
             <code>securityContext</code> allows you to decide what must be true about a pod before it is scheduled on a node. <code>runAsNonRoot: true</code>, <code>readOnlyRootFilesystem: true</code>
             </li>
-            <time>27 August 2019</time>
+        <h2><time>27 August 2019</time></h2>
             <li>
             <code>SIGTERM</code> is a way of getting a process to gracefull shut down, while <code>SIGKILL</code> just kills everything without letting processes shut down. In K8s, the default time to wait for <code>SIGTERM</code> to finish is 30 seconds. 
             </li>
-            <time>23 August 2019</time>
+        <h2><time>23 August 2019</time></h2>
             <li>
             When you make a web request, the inital part if finding the IP address of a domain. The request and response are usually UDP packets. (https://jvns.ca/networking-zine.pdf)
             </li>
-        <ul>
-            <time>21 August 2019</time>
+        <h2><time>21 August 2019</time></h2>
             <li>
             In Golang, if you set up your function to require an error is returned, you return <code>nil</code> if everything is working without an issue.
             </li>
-            <time>20 August 2019</time>
+        <h2><time>20 August 2019</time></h2>
             <li>
             In Kubernetes, a <code>securityContext</code> lets you decide what the pod or container can and cannot access, as well as the privileges the container has on the node.
             </li>
-
         </ul>
 
     <p>&copy; 2019 Kim Schlesinger</p>
