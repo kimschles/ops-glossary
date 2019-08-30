@@ -12,6 +12,11 @@
 <body>
     <h1>Today I Learned</h1>
         <ul>
+        <h2><time>30 August 2019</time></h2>
+            <li>
+            The dictionary definition of interpolation is 'insert (something of a different nature) into something else.' In Terraform, you can interpolate values by wrapping items in <code>${}</code>. For example, <code>count = "${length(var.github_users)}"
+</code>. 
+            </li>
         <h2><time>29 August 2019</time></h2>
             <li>
             In kops, you can create <code>instancegroups</code> which are a group nodes that share something like a size, or label. To see an instance group, run <code>kops get instancegroups</code>.
