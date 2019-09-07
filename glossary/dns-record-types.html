@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DNS Record Types</title>
+</head>
+
+<body>
+    <h1>DNS Record Types</h1>
+
+    <p>CNAME (Canonical Name): a record that creates an alias from one domain name to another.
+        <ul>
+            <li>For example,
+                www.ops-glossary.com points to ops-glossary.com</li>
+            <li>code> dig CNAME ops-glossary.com</code></li>
+        </ul>
+    </p>
+
+    <p>A (Host Address): a file that shows the server's IP address
+        <ul>
+            <li>
+                <code>host -t a example.com</code>
+            </li>
+            <li>Note: this will not work with an alias</li>
+        </ul>
+    </p>
+
+    <p>AAAA (ipv6 Host Address): a file that shows the server's ipv6 address
+        <ul>
+            <li>
+                <code>host -t a example.com</code>
+            </li>
+        </ul>
+    </p>
+
+    <p>NS (Name Server): Translates a domain name to an IP address.
+        <ul>
+            <li>
+                <code>host -t ns ops-glossary.com</code>
+            </li>
+        </ul>
+    </p>
+
+    <p>TXT (Text): A file with key-value pairs stored as text.
+        <ul>
+            <li>
+                <code>host -t txt google.com</code>
+            </li>
+        </ul>
+    </p>
+
+    to do:
+
+    ALIAS (Auto resolved alias), MX (Mail eXchange), PTR (Pointer), SOA
+
+    <h3>Sources and Resources</h3>
+    <ul>
+        <li><a href="https://support.dnsimple.com/categories/dns/" target="_blank">DNSimple Articles</li></a>
+    </ul>
+
+    <p>&copy; 2019 Kim Schlesinger</p>
+
+</body>
+
+</html>
