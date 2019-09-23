@@ -12,6 +12,15 @@
 <body>
     <h1>Today I Learned</h1>
     <ul>
+        <h2><time>23 September 2019</time></h2>
+        <li> In Kubernetes, labels help you organize pods, deployments, services and other Kubernetes Objects. A label
+            is a key value pair, and using <code>kubectl</code>,
+            you can filter searches by specifying a label. For example,
+            <code>k get po -l app=kubernetes-dashboard --all-namespaces</code> will return all pods with the label
+            <code>kubernetes-dashboard</code>. If you want to see the labels for all pods, run
+            <code>k get po --show-labels --all-namespaces</code>
+
+        </li>
         <h2><time>20 September 2019</time></h2>
         <li> CPU Requests and Limits: CPU resources are measured in millicores. A CPU core has 1000 millicores.
             Kubernetes pods can specify the amount of CPU it will request on a node, and they can describe the maximum
@@ -30,12 +39,13 @@
             References in a golang project with VSCode.
         </li>
         <h2><time>16 September 2019</time></h2>
-        <li> The default values for a helm chart are set in `values.yaml`. You can override these values with
-            environment-specific values files like `staging-values.yaml.`
+        <li> The default values for a helm chart are set in <code>values.yaml</code>. You can override these values with
+            environment-specific values files like <code>staging-values.yaml</code>.
         </li>
 
         <h2><time>9 September 2019</time></h2>
-        <li> When you are making a Helm chart, you will have to have a `Chart.yaml` file at the root of your chart
+        <li> When you are making a Helm chart, you will have to have a <code>Chart.yaml</code> file at the root of your
+            chart
             directory. See the format in <a href="https://helm.sh/docs/developing_charts/#the-chart-yaml-file">The Helm
                 Docs</a>.
         </li>
