@@ -12,6 +12,16 @@
 <body>
     <h1>Today I Learned</h1>
     <ul>
+        <h2><time>3 October 2019</time></h2>
+        <li>In software, the term 'backport' means taking some lines of code from new software, and using it in an older
+            version of the same software. This is often done to fix security issues in older software.
+        </li>
+        <li>Audit logs (AKA an audit trail), are records of a change to a system. In Kubernetes, a way to figure audit
+            logs is to record all `GET` `POST` `DELETE` and `PATCHES`, the entity making those requests (a K8s
+            controller or a person, etc), and the result of that request. Audit logs are often looked at when examining
+            a security breach, or analyzed to uncover trends that could be fixed. Some ways of looking at audit logs are
+            Google's Stackdriver, ElasticSearch + Kibana, and Datadog. Audit logs can be _a lot_ of data, so setting up
+            limits is likely a cost-saving measure. </li>
         <h2><time>24 September 2019</time></h2>
         <li> A service is a Kubernetes object that has a stable IP address and port, accepts traffic from the internet
             and directs it to a set of pods. A service sits in front of a set of pods, and has a stable IP because pods
