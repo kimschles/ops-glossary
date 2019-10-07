@@ -12,6 +12,16 @@
 <body>
     <h1>Today I Learned</h1>
     <ul>
+        <h2><time>7 October 2019</time></h2>
+        <li>LetsEncrypt verifies that you control the domain names you claim via a challenge. The two most common types
+            of challenges are <code>HTTP-01</code> (the recommended Let's Encrypt default) and the <code>DNS-01</code>.
+            I
+            the <code>HTTP-01</code> challenge, Let's Encrypt gives a token to your ACME client, and the ACME client
+            puts a file on your webserver that has the token and a print of your account key. Let's Encrypt tries to
+            access that file in multiple different ways, and if it gets the response it expects, Let's Encrypt will
+            issue a certificate. The <code>DNS-01</code> challenge checks for a TXT record affiliated with the domain
+            name. This is what I'm setting up when Firebase asks me to verify my domain. 😁
+        </li>
         <h2><time>3 October 2019</time></h2>
         <li>In software, the term 'backport' means taking some lines of code from new software, and using it in an older
             version of the same software. This is often done to fix security issues in older software.
