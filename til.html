@@ -13,9 +13,36 @@
     <h1>Today I Learned</h1>
     <ul>
         <h2><time>9 October 2019</time></h2>
+        <h3>Luke's Recommended Git Workflow for Open Source golang projects </h3>
+        <li>
+            - Clone the original project
+            - Fork the project and copy the address for the remote
+            - Add a second remote called `kim` (you can give this remote your name, or anything else you desire) that
+            points to your fork’s remote
+            - Checkout to a new branch and do some work
+            - Push your feature to your fork’s remote (`git push -u kim my_feature` )
+            - When you need to merge in new changes from the project, `git pull origin master` and `git rebase
+            origin/master`
+
+            <code>
+
+                    git clone git@github.com:fairwindsops/rbac-lookup.git
+                    git remote add luke git@github.com:lucasreed/rbac-lookup.git
+                    git checkout -b my_feature
+                      <Do some work here>
+                    git push -u luke my_feature</code>
+
+        </li>
+        <h2><time>8 October 2019</time></h2>
         <img width=600
             src="https://lh3.googleusercontent.com/VF-kbAIy6cbLM4Y9Ji3bwFFTHwXctls0OaMQ7qbtJDtjx_REGU3e2fngLI-__isMlY3uF94M4GCC5W0WbYJTE-6DnRVO1uOhxIEgjWGugZbnkg4tasz62Pp5vqSGJw0njAe-3F9BgqO4SoVJMaLQP_lk7jldhQ6Zbw7RPZhHuZbbB1QJHe58_sHAv8p6EHhnBrvNhu_YNT6foVNod0PO9kwjGeaneibnnCv44taGmDDl0NOz0U90w44lEkdyo5qkTxIfaASG9XiERY0nOsVbyrhA7PxKlKHtPoZcA1_Q3eQfsGlYsrw--T7x6mFWgMQE3yE8sbc1XOsDlvYS5pyb6P3G_An80KaFWcfq4dl8prMdVaRyb6oIr5Qx-wXNc_8MP71r07An6Jd4DX7kC8h36BrZ2sPH6UHFO024DCRtsJYjS9l1aAKeaevCFx91iyo-pglbCWqF1PsG_seWbgwAV3rDl9kWPjeX5Q7p0lavhj9OhwUswCZLIap3XOIDa1wypuXIMLCskv4IHRfeduxkfKa94AIHhVu4a7l0BZLh0xI9BDvu20rXllib5B55_kyse8tFo8wmlQV0x1uy0Pc2HKzmdyYbI_XB572dGNjD6Q9noulp2GhM8Y5hVGUF9PtTGrzzT2bo1e-WqMSx95gOgwYBWPmkyxbQhG6vQptix_N7P-YMi8VhbYA=w1007-h962-no"
             alt="A picture of handwritten notes that say RBAC is a way of giving individuals or services accounts access to a namespace or cluster. The Kubernetes admin can grant role access to these verbs: get, list, watch, create, update, patch, delete.">
+        <li>A good resource for an overivew of RBAC: <a href="https://www.youtube.com/watch?v=G3R24JSlGjY">Understand
+                Role Based Access Control in Kubernetes with Brenden Gregg</a></li>
+        <li>A good overview of setting up a role with port-forward permissions only: <a
+                href="https://medium.com/@ManagedKube/kubernetes-rbac-port-forward-4c7eb3951e28">Kubernetes RBAC
+                Port Forward</a></li>
+
         <h2><time>7 October 2019</time></h2>
         <li>LetsEncrypt verifies that you control the domain names you claim via a challenge. The two most common types
             of challenges are <code>HTTP-01</code> (the recommended Let's Encrypt default) and the <code>DNS-01</code>.
