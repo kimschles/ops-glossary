@@ -11,11 +11,13 @@
 <body>
     <h1>DNS Record Types</h1>
 
-    <p>CNAME (Canonical Name): a record that creates an alias from one domain name to another.
+    <p>CNAME (Canonical Name): a record that creates an alias from one domain name to another. This kind of record
+        cannot be used with a root domain because the root domain needs the SOA record, and potentially MX and TXT
+        records.
         <ul>
             <li>For example,
                 www.ops-glossary.com points to ops-glossary.com</li>
-            <li>code> dig CNAME ops-glossary.com</code></li>
+            <li><code> dig CNAME ops-glossary.com</code></li>
         </ul>
     </p>
 
@@ -44,7 +46,9 @@
         </ul>
     </p>
 
-    <p>TXT (Text): A file with key-value pairs stored as text.
+    <p>TXT (Text): A file with key-value pairs stored as text. These files are used for a few different things: to store
+        configuration information, to prepare the domain for the Let's Encrypt <code>DNS-01</code> challenge, or setting
+        up a domain to use a specific email provider.
         <ul>
             <li>
                 <code>host -t txt google.com</code>
@@ -52,13 +56,20 @@
         </ul>
     </p>
 
-    to do:
+    <p>ALIAS (Auto resolved alias)</p> Like a CNAME record because it points one domain name to another. Unlike a CNAME
+    record because other records can be connected to the domain.
+    <ul>
+        <li></li>
+    </ul>
 
-    ALIAS (Auto resolved alias), MX (Mail eXchange), PTR (Pointer), SOA
+    To Do:
+    MX (Mail eXchange), PTR (Pointer), SOA
 
     <h3>Sources and Resources</h3>
     <ul>
         <li><a href="https://support.dnsimple.com/categories/dns/" target="_blank">DNSimple Articles</li></a>
+        <li><a href="https://blog.dnsimple.com/2014/01/why-alias-record/" target="_blank">Technical reasons behind
+                the ALIAS record</a></li>
     </ul>
 
     <p>&copy; 2019 Kim Schlesinger</p>
