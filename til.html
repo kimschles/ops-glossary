@@ -13,6 +13,17 @@
     <h1>Today I Learned</h1>
 
     <ul>
+        <h2><time>13 November 2019</time></h2>
+        <li>A Kubernetes volume is a directory that contains files. The files in a volume are available to any container
+            in the pod that has a volume, and the files disappear when the pod is deleted, but stay when the pod is
+            restarted. The files can be accessed at the <code>volumeMount</code>, which is the path to the directory and
+            files.</li>
+        <li>There are different types of Kubernetes volumes. For directories that are on the node, use
+            <code>emptyDir</code> or <code>hostPath</code>. For cloud-provider volumes, use
+            <code>awsElasticBlockStore</code> or <code>gcePersistentDisk</code>. If you want a distributed file system,
+            use <code>cephfs</code>, and there are special types of volumes like <code>secret</code>. Everything I know
+            about volumes I learned from <a href="http://kubernetesbyexample.com/volumes/">Kubernetes volumes by
+                example</a> </li>
         <h2><time>11 November 2019</time></h2>
         <li> Helm is solving the problem of having to run
             <code>kubectl apply -f service.yaml</code> or <code>kubectl create -f service.yaml</code> over and over
@@ -20,7 +31,7 @@
             if you have an
             application with lots of components, or using lots of K8s features like pdbs, hpas, etc. Helm lets you
             install, upgrade, and rollback the app as a deployment. See this drawing for more info (thank you to <a
-                href="https://twitter.com/deniseyu21">Denise Yu</a> ):
+                href="https://twitter.com/deniseyu21">Denise Yu</a>):
         </li>
         <img src="https://pbs.twimg.com/media/DlUkwjtW4AEmNfU.jpg:small" alt="">
         <h2><time>7 November 2019</time></h2>
@@ -37,7 +48,6 @@
         <li>I attended LISA19, and attended a lot of talks and workshops. I summarized each talk with it's own tweet.
             See my <a href="https://twitter.com/kimschles/status/1189765049130405888">twitter feed</a> and scroll back
             starting on October 30, 2019.</li>
-
         <h2><time>16 October 2019</time></h2>
         <li>I updated the definition of TXT records and ALIAS records in <a href="./glossary/dns-record-types.html">DNS
                 Record Types.</a></li>
