@@ -13,11 +13,22 @@
     <h1>Today I Learned</h1>
 
     <ul>
+        <h2><time>14 November 2019</time></h2>
+        <li>In Kubernetes, the metrics-server collects data about CPU and memory usage for all nodes and pods in a
+            cluster. Metrics-server is a deployment. At FW, we deploy metrics-server by installing and upgrading the
+            stable Helm chart. The image is hosted in the google container registry. You can see it <a
+                href="https://console.cloud.google.com/gcr/images/google-containers/GLOBAL/metrics-server-amd64?gcrImageListsize=30">here</a>.
+        </li>
+        <li>Metrics server sends its data to the metrics api, which publishes the data as an api endpoint. The metrics
+            api only displays the most current data because there's no mechanism to store and query data from the past.
+            That's where a metrics collection tool comes in handy.
+        </li>
         <h2><time>13 November 2019</time></h2>
         <li>A Kubernetes volume is a directory that contains files. The files in a volume are available to any container
             in the pod that has a volume, and the files disappear when the pod is deleted, but stay when the pod is
-            restarted. The files can be accessed at the <code>volumeMount</code>, which is the path to the directory and
-            files.</li>
+            restarted. The files can be accessed at the <code>volumeMount</code>, which gets a name, and a
+            <code>mountPath</code>, which provides a path
+            to the directory which contains the files.</li>
         <li>There are different types of Kubernetes volumes. For directories that are on the node, use
             <code>emptyDir</code> or <code>hostPath</code>. For cloud-provider volumes, use
             <code>awsElasticBlockStore</code> or <code>gcePersistentDisk</code>. If you want a distributed file system,
