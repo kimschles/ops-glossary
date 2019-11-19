@@ -13,6 +13,18 @@
     <h1>Today I Learned</h1>
 
     <ul>
+        <h2><time>10 November 2019</time></h2>
+        <li>You use <code>envFrom: -configMapRef: name: configmap-name</code>to make the key:value pairs in a config map
+            environment variables. You use <code>
+                env:
+                    - name: BACKEND_USERNAME
+                      valueFrom:
+                        secretKeyRef:
+                          name: backend-user
+                          key: backend-username
+                    - name: DB_USERNAME</code> to convert the data from a k8s secret(s) into environment variables. The
+            code goes in the pod manifest.
+        </li>
         <h2><time>14 November 2019</time></h2>
         <li>In Kubernetes, the metrics-server collects data about CPU and memory usage for all nodes and pods in a
             cluster. Metrics-server is a deployment. At FW, we deploy metrics-server by installing and upgrading the
