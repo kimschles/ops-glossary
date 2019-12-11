@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Service Discovery</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../main.css">
+</head>
+
+<body>
+    <h1>Service Discovery</h1>
+    <p>When building a distributed system, services need to know the IP address and port of the other services they want
+        to talk to. This is tricky for a couple of reasons:
+        <ol>
+            <li>In the "old system," IP addresses were static. In the new world, IP addresses are dynamic and change
+                often. How can services keep track of all the changing IP addresses?</li>
+            <li>How does a service know when a new one has come online, or one has been dropped from the network?</li>
+        </ol>
+        One solution for service discovery is a software that keeps a list of the service name, its health and its IP
+        address and port. Hashicorp's Consul uses this solution.
+    </p>
+
+    <h3>Sources and Resources</h3>
+    <ul>
+        <li><a href="https://www.nginx.com/blog/service-discovery-in-a-microservices-architecture/"
+                target="_blank">Service Discovery in a Microservices Architecture</a></li>
+        <li><a href="http://kubernetesbyexample.com/sd/">Kubernetes By Example: Service Discovery</a></li>
+        <li><a href="https://www.consul.io/discovery.html">Hashicorp Consul</a></li>
+    </ul>
+
+    <p>&copy; 2019 Kim Schlesinger</p>
+
+</body>
+
+</html>
