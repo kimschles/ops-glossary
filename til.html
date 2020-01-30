@@ -13,6 +13,25 @@
     <h1>Today I Learned</h1>
 
     <ul>
+        <h2><time>30 January 2020</time></h2>
+        <li>
+            <p><code>IOPS</code>is a term that describes how many input/output operations happen per second in a
+                database. For AWS EC2, EBS volumes are attached to instances, and act as databases. There are two kinds
+                of volumes, magnetic and SSD drives. SSD drives are faster, and AWS offers two kinds: io1 and gp2.</p>
+
+            <p>io1 is provisioned iops, which means you get a set number of iops that you specify when the volume is
+                created.</p>
+
+            <p>gp2 is general purpose iops, which means you get one burst of iops every 24 hours. This makes this volume
+                type good for workloads that have bursty-output.</p>
+
+            <p>A good article:<a
+                    href="https://aws.amazon.com/blogs/database/understanding-burst-vs-baseline-performance-with-amazon-rds-and-gp2/">Understanding
+                    Burst vs. Baseline Performance with Amazon RDS and GP2</a></p>
+
+
+        </li>
+
         <h2><time>11 December 2019</time></h2>
         <li><a href="./glossary/service-discovery.html">Service Discovery</a></li>
         <h2><time>10 December 2019</time></h2>
