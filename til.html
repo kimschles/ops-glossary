@@ -15,7 +15,51 @@
     <ul>
         <h2><time>30 January 2020</time></h2>
         <li>
-            <p><code>IOPS</code>is a term that describes how many input/output operations happen per second in a
+            <p>Kubernetes admissions controllers are a security feature that intercept an authenticated Kubernetes API
+                request
+                and
+                either change the request (mutating admission) and/or okays the request (validating admission). There
+                are 30+ admission controllers in Kubernetes. See the complete list <a
+                    href="https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/#what-does-each-admission-controller-do">here</a>.
+            </p>
+
+            <p>To see which admissions controllers are enabled in a cluster, run
+                <code>kube-apiserver -h | grep enable-admission-plugins</code>.</p>
+
+            <p>A commonly used admission controller is <code>ValidatingAdmissionWebhook</code>. This controller gets a
+                request that is authenticated, but hasn't been let into the cluster. When
+                <code>ValidatingAdmissionWebhook</code> is enabled with the nginx-ingress-controller, it checks that
+                the new ingress object is configured properly.</p>
+
+            <p>from Andy Suderman:</p>
+            <ol>
+                <li>You send an ingress object to the kube cluster via kubectl (which is an API request)</li>
+                <li>The kube api-server validates that you are authorized to make that request</li>
+                <li>The kube api-server validates that it is a valid ingress object</li>
+                <li>Noticing that there is a validatingAdmissionWebhook, it then forwards the request to the endpoint
+                    specified in that configuration. In this case the nginx validating admission webhook server</li>
+                <li>The nginx-ingress validating admission webhook server validates that the nginx config that would be
+                    created by that ingress object is valid</li>
+                <li>The nginx-ingress validating admission webhook server tells the Kube API server that it is good to
+                    go</li>
+                <li>The ingress object is created, and then things proceed as usual</li>
+            </ol>
+
+            <p>If step 5 fails, then nginx tells the Kube API server that the request should fail, and then you get an
+                error back from the api server
+            </p>
+
+            <a href="https://kubernetes.github.io/ingress-nginx/deploy/validating-webhook/">nginx ingress controller
+                validating webhook</a>
+
+            <a
+                href="https://blog.container-solutions.com/a-gentle-intro-to-validation-admission-webhooks-in-kubernetes">A
+                Gentle Intro to Validation Admission Webhooks in Kubernetes</a>
+
+
+        </li>
+        <li>
+            <p><code>IOPS</code> is a term that describes how many input/output operations happen per second in a
                 database. For AWS EC2, EBS volumes are attached to instances, and act as databases. There are two kinds
                 of volumes, magnetic and SSD drives. SSD drives are faster, and AWS offers two kinds: io1 and gp2.</p>
 
@@ -25,7 +69,7 @@
             <p>gp2 is general purpose iops, which means you get one burst of iops every 24 hours. This makes this volume
                 type good for workloads that have bursty-output.</p>
 
-            <p>A good article:<a
+            <p>A good article: <a
                     href="https://aws.amazon.com/blogs/database/understanding-burst-vs-baseline-performance-with-amazon-rds-and-gp2/">Understanding
                     Burst vs. Baseline Performance with Amazon RDS and GP2</a></p>
 
