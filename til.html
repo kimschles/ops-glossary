@@ -13,6 +13,19 @@
     <h1>Today I Learned</h1>
 
     <ul>
+        <h2><time>11 February 2020</time></h2>
+        <li>
+            The difference between the number of replicas set in a Kubernetes deployment and a Pod Disruption Budget:
+            In the deployment, <code>replicas: 3</code> the number of replicas is the number of pods that are intended
+            to exist. The PDB specifies how many replicas are tolerable during an time when the cluster admin is making
+            changes, most
+            frequently while draining and evicting nodes during a cluster upgrade.
+        </li>
+        <h2><time>6 February 2020</time></h2>
+        <li>Assuming an IAM role is done via the AWS CLI. To do this, first get the role's ARN. Then, assume the role
+            with this command. Replace the 'dummy' ARN with yours:
+            <code>aws sts assume-role --role-arn arn:aws:iam::123456748226:role/nomad-admin --role-session-name AWSCLI-Session</code>.
+        </li>
         <h2><time>30 January 2020</time></h2>
         <li>
             <p>Kubernetes admissions controllers are a security feature that intercept an authenticated Kubernetes API
