@@ -13,6 +13,10 @@
     <h1>Today I Learned</h1>
 
     <ul>
+        <h2><time>27 March 2020</time></h2>
+        <li>In Go, if you return a value and see something like this: <code>0xc0000100c0</code>, that's a pointer, and
+            it's the actual memory address of the value. You can dereference with an <code>*</code> in front of the
+            variable. For example, instead of <code>kubeconfig</code>, try <code>*kubeconfig</code>.</li>
         <h2><time>25 February 2020</time></h2>
         <li>In Kubernetes, a persistent volume is a way of storing data in the cluster. A persistent volume claim is a
             request for storage by a user. The goal of persistent volumes if to persist data between pod restarts.</li>
