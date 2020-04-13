@@ -13,6 +13,28 @@
     <h1>Today I Learned</h1>
 
     <ul>
+        <h2><time>14 April 2020</time></h2>
+        <h3>Datadog and external-metrics</h3>
+
+        <h2><time>13 April 2020</time></h2>
+        <h3>k8s custom-metrics and external-metrics</h3>
+        <li>The custom metrics and external metrics are designed to pair with Horizontal Pod Autoscalers (HPAs).</li>
+        <li>Custom metrics are data that are reported from an application running inside of Kubernetes. The api extesion
+            is <code>custom.metrics.k8s.io</code></li>
+        <li>External metrics are data that are collected from outside your Kubernetes cluster. The api extension is
+            <code>external.metrics.k8s.io</code></li>
+        <li>You can see if those apis are enabled by running <code>kubectl api-versions</code></li>
+        <li>Here's a good diagram from learnk8s.io:</li>
+        <img src="https://learnk8s.io/a/997550cf3885636ed8377b61cb083b32.svg" alt="">
+        <h4>Resources:</h4>
+        <li><a
+                href="https://medium.com/uptime-99/kubernetes-hpa-autoscaling-with-custom-and-external-metrics-da7f41ff7846">Jess's
+                article about HPAs</a></li>
+        <li><a href="https://cloud.google.com/kubernetes-engine/docs/concepts/custom-and-external-metrics">GKE Custom
+                and External Metrics</a></li>
+        <li><a href="https://learnk8s.io/autoscaling-apps-kubernetes">Learn K8s Autoscaling Apps</a></li>
+
+
         <h2><time>27 March 2020</time></h2>
         <li>In Go, if you return a value and see something like this: <code>0xc0000100c0</code>, that's a pointer, and
             it's the actual memory address of the value. You can dereference with an <code>*</code> in front of the
