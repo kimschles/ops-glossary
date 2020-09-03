@@ -13,9 +13,18 @@
     <h1>Today I Learned</h1>
 
     <ul>
+        <h2><time>3 September 2020</time></h2>
+        <h3>nginx-ingress default-backend</h3>
+        <li>The default-backend is a pod that responds with a 404 status code. If the nginx-ingress controller doesn't
+            recognize a URL
+            that is being requested, the request is sent to the default-backend. Other requests are sent to services
+            that match the request.
+        <li>Doc: [nginx-ingress default-backend](https://kubernetes.github.io/ingress-nginx/user-guide/default-backend/
+            )</li>
+
         <h2><time>1 September 2020</time></h2>
-        <h3>nginx ingress controller</h3>
-        <li>The Kubernetes nginx-ingress-controller is a service that load balances traffic from the internet to pods
+        <h3>nginx-ingress controller</h3>
+        <li>The Kubernetes nginx-ingress controller is a service that load balances traffic from the internet to pods
             inside the cluster. It is run as Kubernetes pod. </li>
 
 
